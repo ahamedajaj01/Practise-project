@@ -64,7 +64,7 @@ i{
     margin-left: 10px;
 }
 .search-select{
-    width: 50px;
+    width: 50%
     background-color: #f3f3f3;
     text-align: center;
     border-bottom-left-radius: 5px;
@@ -76,6 +76,7 @@ i{
     font-size: 1rem;
     border: none;
 }
+
 .search-icon{
     width: 45px;
     background-color: rgb(245, 161, 6);
@@ -90,6 +91,9 @@ align-items: center;
 .nav-search:hover{
     border: 2px solid orange;
 }
+
+
+
 /* Box 4 */
 
 span{
