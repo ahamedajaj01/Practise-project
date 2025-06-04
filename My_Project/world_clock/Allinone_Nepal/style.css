@@ -1,0 +1,1164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.navbar {
+  top: 0;
+  left: 0;
+  width: 100%;
+
+}
+
+#navbar_container {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  /* or your navbar background */
+  z-index: 1000;
+  /* keep it on top */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  height: 60px;
+  /* or your navbar height */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+main {
+  padding-top: 60px;
+  /* or height of your navbar */
+
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+
+  padding: 15px;
+  gap: 3rem;
+  padding-left: 15rem;
+  /* desktop left padding */
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar ul a:hover {
+  border: 1px solid #09101b;
+  border-radius: 4px;
+  text-shadow: 0.5px 0.5px 0.8px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  display: inline-block;
+  /* needed for transform to work properly */
+  transition: all 0.3s ease;
+
+}
+
+ul a {
+  color: #1a1b29;
+  text-decoration: none;
+}
+
+#logo {
+  position: absolute;
+  z-index: 1100;
+  /* higher than navbar if needed */
+  left: 10px;
+  top: 21px;
+  font-size: 1.25rem;
+  font-weight: 800;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #f3b359;
+}
+
+#logo a {
+  color: #e59e06;
+  text-decoration: none;
+  text-shadow: 1px 1px 2px rgb(16, 15, 15, 0.5)
+}
+
+#logo a:hover {
+  color: #f0f2f5;
+  border: 1px solid #09101b;
+  border-radius: 5px;
+  background-color: #0B5ED7
+}
+
+#search {
+  height: 40px;
+  width: 300px;
+  padding-left: 2rem;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f3f3f3;
+  color: #333;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+#search:hover {
+  border: 2px solid #f4b915;
+}
+
+.search-box i {
+  position: absolute;
+  left: 10px;
+  color: #888;
+  font-size: 16px;
+}
+
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* navbar categories section  */
+
+
+.categories {
+  position: relative;
+}
+
+.categories .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  z-index: 1000;
+  min-width: 120px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.categories .dropdown li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.categories .dropdown li a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Show dropdown on hover */
+.categories:hover .dropdown {
+  display: block;
+
+}
+
+/* NAVBAR ACCOUNT SECTION */
+
+.account {
+  position: relative;
+}
+
+.account .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  z-index: 1000;
+  min-width: 120px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.account .dropdown li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.account .dropdown li a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Show dropdown on hover */
+.account:hover .dropdown {
+  display: block;
+
+}
+
+/* navbar cart section */
+
+.cart {
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s ease;
+
+}
+
+.fa-solid {
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+/* General hover effect for all links EXCEPT cart */
+.navbar ul li:not(.cart) a:hover {
+  border-bottom: 2px solid #000;
+  color: black;
+}
+
+/* Custom hover effect for the cart link */
+.navbar ul .cart a:hover {
+  background-color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  transform: scale(1.2);
+  display: inline-block;
+  /* needed for transform to work properly */
+  transition: all 0.3s ease;
+  /* optional: smooth animation */
+}
+
+
+/* Footer styling */
+#footer-container {
+  background-color: black;
+  color: white;
+  margin-top: 2rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-evenly;
+  height: 200px;
+  padding: 1rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 1rem;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #111;
+}
+
+#footer-container a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+#footer-container a:hover {
+  text-decoration: underline;
+}
+
+/* ***************   Main container fetched from api  *********** */
+
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  /* stack title, price, button vertically */
+  padding: 1rem;
+  width: 250px;
+  /* or any fixed width you want */
+  box-sizing: border-box;
+}
+
+.card-img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  padding: 1rem;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #222;
+  margin: 0.5rem 0 0.2rem;
+
+  /* Prevent long titles from pushing button */
+  white-space: nowrap;
+  /* Keep text on one line */
+  overflow: hidden;
+  /* Hide overflow */
+  text-overflow: ellipsis;
+  /* Show ... if too long */
+  max-width: 100%;
+}
+
+.card-price {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.card-rating {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.add-to-cart {
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  background-color: #f39c12;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.add-to-cart:hover {
+  background-color: #f39c12;
+}
+
+/* ***************** Main container for cart page */
+/* ========== Cart Page Styling ========== */
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Individual Cart Item */
+.cart-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #222;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.cart-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1rem;
+  background-color: #fdfdfd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.cart-item:hover {
+  transform: scale(1.01);
+}
+
+/* Cart Item Image */
+.cart-item-img {
+  flex: 1 1 250px;
+  max-width: 250px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 0.5rem;
+}
+
+/* Cart Item Text Content */
+.cart-item-body {
+  flex: 2 1 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* Title */
+.cart-item-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #222;
+}
+
+/* Price */
+.cart-item-price {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+/* Rating */
+.cart-item-rating {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Remove Button */
+.remove-from-cart {
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.remove-from-cart:hover {
+  background-color: #c0392b;
+}
+
+
+
+/* ========== Responsive ========== */
+
+@media (max-width: 768px) {
+  .cart-item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cart-item-body {
+    align-items: center;
+    text-align: center;
+  }
+
+  .remove-from-cart {
+    align-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .cart-items {
+    padding: 1rem;
+  }
+
+  .cart-item {
+    padding: 1rem 0.5rem;
+  }
+
+  .cart-item-title {
+    font-size: 1.1rem;
+  }
+
+  .cart-item-price,
+  .cart-item-rating {
+    font-size: 0.9rem;
+  }
+
+
+}
+
+/*    cart count */
+
+#cart-count {
+  position: absolute;
+  top: -16px;
+  right: -0px;
+  background-color: #2980b9;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  font-weight: bold;
+  min-width: 18px;
+  text-align: center;
+  pointer-events: none;
+}
+
+/*******   Cart checkout ccs  */
+
+.div-cart-container{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+
+
+
+/* Slider container */
+.slider-container {
+
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.div1 {
+
+  width: 300px;
+  height: 450px;
+  border: 1px solid black;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+
+.div1:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgb(251, 162, 9, 0.2);
+}
+
+.slide-text {
+  background-color: rgba(0, 0, 0, 0.6);
+  /* transparent black background */
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.slide-text a:hover {
+  color: #f4b915;
+  text-decoration: underline;
+}
+
+
+.card {
+  width: 300px;
+  height: 400px;
+  border: 1px solid black;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+/* animation effect for slider div */
+
+
+
+.slider-container a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s ease;
+}
+
+.slider-container a:hover {
+  color: #f4b915;
+  text-decoration: underline;
+}
+
+#search-btn {
+  height: 42px;
+  width: 100px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f3f3f3;
+  color: #333;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+#search-btn:hover {
+  border: 2px solid #f4b915;
+  background-color: #ecdcb1;
+}
+
+
+
+/* ===================== */
+/*   Responsive Design   */
+/* ===================== */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    gap: 1.5rem;
+    padding-left: 0;
+    /* this is correct */
+    font-size: 1rem;
+    background-color: transparent;
+  }
+
+  #navbar_container {
+    flex-wrap: wrap;
+    /* allow wrapping */
+  }
+
+  #logo {
+    position: static;
+    /* normal flow */
+    padding: 10px 0;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+
+  .search-box {
+    width: 100%;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  #search {
+    width: 90%;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    gap: 1rem;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .footer-section,
+  .contact,
+  .socials {
+    width: 100%;
+  }
+
+  .main-container {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .card-img {
+    height: 200px;
+  }
+}
+
+/*Responsive design for main content  */
+
+
+@media (max-width: 768px) {
+  #navbar_container {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  #navToggle {
+    order: 1;
+    margin-right: 0;
+    margin-left: 10px;
+  }
+
+  #logo {
+    order: 2;
+    margin-left: 10px;
+  }
+}
+
+.navbar ul {
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.main-content {
+  margin-top: 70px;
+  /* prevent overlap */
+  width: 100%;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+}
+
+.main-content img,
+.main-content div {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+
+@media (max-width: 768px) {
+
+  #container,
+  #wrapper {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .div1 {
+    flex: 0 0 80%;
+    height: 350px;
+    scroll-snap-align: center;
+    /* Remove debug border and background-color when done */
+    /* border: 2px solid red; */
+    /* background-color: rgba(0, 0, 0, 0.3); */
+  }
+
+  .slider-container {
+    background-color: #f2e8e8;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .slider-container::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-container {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding: 1rem;
+    height: auto;
+    scroll-behavior: smooth;
+    background-color: #ddd;
+    /* debug */
+  }
+}
+
+.div1 {
+  flex: 0 0 300px;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* debug */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: white;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+  .div1 {
+    flex: 0 0 80%;
+    height: 350px;
+    scroll-snap-align: center;
+    /* Remove debug border and background-color when done */
+
+  }
+
+  .slider-container {
+    margin-top: 2rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+  }
+
+  .slider-container::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+
+/* ......................Sign Up  Css............ */
+h2 {
+  text-align: center;
+  margin-top: 5rem;
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)
+}
+
+#Signup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2)
+}
+
+.signup-message {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2)
+}
+
+form {
+  /* border: 1px solid black; */
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f4f6f8;
+
+}
+
+form input {
+  width: 100%;
+  max-width: 350px;
+  padding: 0.5rem;
+  margin: 0.2rem 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  transition: border-color 0.3s ease;
+  cursor: pointer;
+}
+
+#signup-btn {
+  width: 100%;
+  max-width: 350px;
+  padding: 0.5rem;
+  margin: 0.2rem 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#signup-btn:hover {
+  cursor: pointer;
+  background-color: #f4b915;
+}
+
+.password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 350px;
+}
+
+.toggle-eye-for-signup {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #555;
+}
+
+/* ---------- Mobile Responsive (Screens ≤ 600px) ---------- */
+@media screen and (max-width: 600px) {
+  h2 {
+
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 5rem;
+  }
+
+  form {
+
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f4f6f8;
+
+  }
+
+}
+
+/* signup form design */
+
+#signup-form input {
+  font-size: 1.25rem;
+  font-weight: 500
+}
+
+#signup-form {
+  position: relative;
+  padding: 40px 30px;
+  background: #2a2727;
+  border-radius: 10px;
+  z-index: 1;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+  color: white;
+}
+
+#signup-form::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #00ffff, #ff00ff, #00ffff, #ff00ff);
+  background-size: 400%;
+  z-index: -1;
+  animation: borderAnim 10s linear infinite;
+  border-radius: 12px;
+}
+
+#signup-form::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: #1f1f1f;
+  z-index: -1;
+  border-radius: 8px;
+}
+
+@keyframes borderAnim {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 400% 0;
+  }
+}
+
+
+/* ........Sign up End ↑ ........... 
+
+/* ✅ Toggle button - hidden on desktop */
+#navToggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+/* ✅ Navbar - visible by default on desktop */
+/* By default, hide the navbar on mobile */
+.navbar {
+  display: flex;
+}
+
+/* Mobile view styling */
+@media (max-width: 768px) {
+  #navToggle {
+    display: block;
+
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 1rem;
+
+
+
+  }
+
+  .navbar {
+    display: none;
+    /* hide by default on mobile */
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  /* When 'show' class is toggled, display navbar */
+  .navbar.show {
+    display: flex;
+  }
+}
+
+/* ............  Login section........ */
+
+.login-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.login-message {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2)
+}
+
+
+.toggle-eye-for-login {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #555;
+}
+
+#login-btn {
+  width: 100%;
+  max-width: 350px;
+  padding: 0.5rem;
+  margin: 0.2rem 0;
+  border: 1px solid #969292;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+#login-btn:hover {
+  background-color: #f4b915;
+}
+
+.link {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+#login-form input {
+  font-size: 1.25rem;
+  font-weight: 500;
+
+}
+
+/* login form animation effect  */
+#login-form {
+  position: relative;
+  padding: 40px 30px;
+  background: #1f1f1f;
+  border-radius: 10px;
+  z-index: 1;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+}
+
+#login-form::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #00ffff, #ff00ff, #00ffff, #ff00ff);
+  background-size: 400%;
+  z-index: -1;
+  animation: borderAnim 10s linear infinite;
+  border-radius: 12px;
+}
+
+#login-form::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: #1f1f1f;
+  z-index: -1;
+  border-radius: 8px;
+}
+
+@keyframes borderAnim {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 400% 0;
+  }
+}
+
+/*...........Login section Ended here  */
