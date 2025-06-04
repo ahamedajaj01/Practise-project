@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AllinOne-Nepal</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <!--          . . . . .  . .           Navbar Section                     -->
+
+      <nav id="navbar_container">
+        <button id="navToggle" aria-label="Toggle navigation">☰</button>
+        <div id="logo">
+          <a href="index.html">AllinOne.Nepal</a>
+        </div>
+        <!--  this is for nav toggle  -->
+        <!--  .................. -->
+
+        <div class="navbar nav-hidden" id="mobileNav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="newArrival.html">New Arrivals</a></li>
+            <li><a href="sale.html">Sale</a></li>
+
+            <li class="categories">
+              <a href="#">Categories</a>
+              <ul class="dropdown">
+                <li><a href="clothing.html">Clothing</a></li>
+                <li><a href="jewellary.html">Jewellary</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <div class="search-box">
+                <input type="text" placeholder="Search" id="search" />
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <button id="search-btn">Search</button>
+              </div>
+            </li>
+
+            <li class="account" id="navbarUserName">
+              <a href="#">Account 👤</a>
+              <ul class="dropdown">
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="login.html">Login</a></li>
+              </ul>
+            </li>
+
+            <!-- cart section -->
+
+            <li class="cart">
+              <a href="pages/cart.html" style="position: relative; display: inline-block;">Cart
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count">0</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- ....................Main section ..................  -->
+      <main>
+        <div class="slider-container">
+          <div
+            class="div1"
+            style="
+              background-image: url(https://cdn.sareeka.com/image/data2023/plain-cotton-designer-kurti-256633.jpg);
+            "
+          >
+            <div class="slide-text"><a href="#">Click for more kurti</a></div>
+          </div>
+          <div
+            class="div1"
+            style="
+              background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqQj0MhrndKz8HYMJQwj7wEk3PrHIFcyZF0Q&s);
+            "
+          >
+            <div class="slide-text"><a href="#">Click for more lehenga</a></div>
+          </div>
+          <div
+            class="div1"
+            style="
+              background-image: url(https://i.etsystatic.com/7321352/r/il/af51bb/5382081718/il_570xN.5382081718_r77r.jpg);
+            "
+          >
+            <div class="slide-text"><a href="#">Click for more sari</a></div>
+          </div>
+          <div
+            class="div1"
+            style="
+              background-image: url(https://wholesalemegamart.com/wp-content/uploads/2024/11/RTC-5765-PARTY-WEAR-SALWAR-KAMEEZ-WHOLESALE-1.jpeg);
+            "
+          >
+            <div class="slide-text">
+              <a href="#">Click for more salwar kameez</a>
+            </div>
+          </div>
+          <div
+            class="div1"
+            style="
+              background-image: url(https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/2024/JULY/30/PLWAYMxM_bc4bd48f7f67404e81b6e125ef1fd677.jpg);
+            "
+          >
+            <div class="slide-text">
+              <a href="#">Click for more churidar</a>
+            </div>
+          </div>
+        </div>
+
+        <!--  loaded data from api  -->
+        <div class="main-container"></div>
+      </main>
+
+      <!-- .................... Footer section.................. -->
+      <footer id="footer-container">
+        <div class="footer-content">
+          <div class="footer-section about">
+            <h1 class="logo-text" style="padding-top: 1rem">AllinOne.Nepal</h1>
+            <p style="padding-top: 0.5rem; font-size: 1rem; font-weight: 500">
+              AllinOne.Nepal is a platform where you can find all clothings and
+              earring products.
+            </p>
+          </div>
+
+          <div class="contact">
+            <h1 style="padding-top: 0.5rem">Contact us:</h1>
+            <p style="padding-top: 1rem; font-size: 1rem; font-weight: 500">
+              <i class="fas fa-phone"></i> phone: 123-456-789
+            </p>
+            <br />
+            <p><i class="fas fa-envelope"></i> email: info@allinone.com</p>
+          </div>
+
+          <div class="socials">
+            <h1 style="padding-top: 0.5rem">Follow us:</h1>
+            <a href="#">
+              <p style="padding-top: 0.5rem">
+                <i class="fab fa-facebook"></i>Facebook
+              </p> </a
+            ><br />
+            <a href="#">
+              <p><i class="fab fa-instagram"></i>Instagram</p> </a
+            ><br />
+
+            <a href="#">
+              <p><i class="fab fa-twitter"></i>Twitter</p> </a
+            ><br />
+            <a href="#">
+              <p><i class="fab fa-youtube"></i>Youtube</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 AllinOne.Nepal. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
