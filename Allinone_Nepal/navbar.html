@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar</title>
+  <link rel="stylesheet"" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav id="navbar_container">
+
+    <div id="logo">
+      <a href="index.html">AllinOne.Nepal</a>
+    </div>
+
+    <button id="navToggle" aria-label="Toggle navigation">☰</button>
+
+    <div class="navbar nav-hidden" id="mobileNav">
+
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="newArrival.html">New Arrivals</a></li>
+        <li><a href="sale.html">Sale</a></li>
+
+
+        <li class="categories">
+          <a href="#">Categories</a>
+          <ul class="dropdown">
+            <li><a href="clothing.html">Clothing</a></li>
+            <li><a href="jewellary.html">Jewellary</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <div class="search-box">
+            <input type="text" placeholder="Search" id="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <button id="search-btn">Search</button>
+          </div>
+        </li>
+
+        <li class="account" id="navbarUserName">
+          <a href="#">Account 👤</a>
+          <ul class="dropdown">
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </li>
+
+        <li class="cart">
+          <a href="cart.html" style="position: relative; display: inline-block;">Cart
+            <i class="fa-solid fa-cart-shopping"></i><span id="cart-count">0</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+</body>
+<script src="script.js">  </script>
+
+</html>
